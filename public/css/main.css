@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f3f3f3;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+
+
+/* Header*/
+
+header {
+    padding: 40px;
+}
+
+header .logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header .logo p {
+    color: #9b9b9b;
+}
+
+header form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+header .barra-busqueda {
+    width: 70%;
+    height: 40px;
+    line-height: 40px;
+    background: rgba(180, 216, 224, 0.884);
+    padding: 0 20px;
+    border-radius: 2px;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+}
+
+header .categorias {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+header .categorias a {
+    color: #9b9b9b;
+    margin: 10px 20px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+header .categorias a.activo {
+    color: #000;
+}
+
+
+/* Grid main*/
+
+.grid {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-left: 8%;
+    margin-right: 8%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s linear 1s;
+}
+
+.grid .item-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.grid .item {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 50px;
+    width: calc(33.3333% -50px);
+}
+
+.grid .item img {
+    border-radius: 20px;
+    width: 300px;
+    height: 250px;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.grid.image-loaded {
+    opacity: 1;
+}
+
+
+/* buttons*/
+
+#btn-back {
+    top: 10px;
+    margin-top: 20px;
+    position: relative;
+    background: none;
+    font-size: 40px;
+    color: #007bff;
+    border: none;
+    cursor: pointer;
+}
+
+#btn-back :hover {
+    transition-delay: 2ms;
+    color: #007bffa8;
+}
+
+
+/* Style the button and place it in the middle of the container/image */
+
+.item-content .btn-admin {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(55, 55, 55, 0.9);
+    color: #f3f3f3;
+    font-weight: bold;
+    font-size: 35px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
